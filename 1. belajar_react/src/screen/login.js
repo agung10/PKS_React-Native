@@ -7,6 +7,7 @@ import {
   Dimensions,
   TouchableOpacity,
 } from 'react-native';
+import MCIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const {width, height} = Dimensions.get('screen');
 
@@ -25,6 +26,7 @@ export default function Login() {
         secureTextEntry
       />
       <TouchableOpacity>
+        <MCIcon name="login" size={width * 0.05} color={'white'} />
         <Text style={styles.text}>Login</Text>
       </TouchableOpacity>
     </View>
@@ -45,7 +47,7 @@ const styles = StyleSheet.create({
   input: {
     width: width * 0.8,
     height: 50,
-    borderColor: '#a85e32',
+    borderColor: '#ff8000',
     borderWidth: 1,
     borderRadius: 5,
     paddingLeft: 10,
@@ -59,5 +61,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
+    flexDirection: 'row',
   },
 });
